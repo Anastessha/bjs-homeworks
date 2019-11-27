@@ -9,8 +9,8 @@ function getSolutions(a,b,c) {
 		let x1 = -b / 2*a;
 		return { roots: [x1], D: 0 }
 	} else if (D > 0) {
-		let x1 = (-b + Math.sqrt(D)) / 2 * a,
-		x2 = (-b - Math.sqrt(D)) / 2 * a;
+		let x1 = (-b + Math.sqrt(D)) / (2 * a),
+		x2 = (-b - Math.sqrt(D)) / (2 * a);
 		return { roots: [x1, x2], D: D }
 	}
 }
@@ -86,7 +86,7 @@ function getPersonData(secretData) {
 		return data;
 	}
 	
-	function decryptedLN(secretDatas) {
+	function decryptedLN(secretData) {
 		let data;
 		for (let item in secretData) {
 			if (item === 'bbb' && secretData[item] === 0) {

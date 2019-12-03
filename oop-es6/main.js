@@ -8,6 +8,7 @@ class Weapon {
 		this.attack = attack;
 		this.durability = durability;
 		this.range = range;
+		const originDurability = durability;
 	}
 	
 	takeDamage(damage) {
@@ -19,7 +20,7 @@ class Weapon {
 	}
 	
 	getDamage() {
-		if (this.durability >= this.durability * 0.3) {
+		if (this.durability >= this.originDurability * 0.3) {
 			return this.attack;
 		} else {
 			return this.attack / 2;
